@@ -6,8 +6,8 @@
 # Cada vez que algo se movimentar em frente da camera.
 # Dependencia:
 # Instalar make gcc dkms motiom e 
-# Linux-heardes, para compilar 
-# O driver v4l2loopback.
+# Linux-heardes.
+# Para compilar 0 driver v4l2loopback.
 
 - Baixe o app  Droidcam do Google app.
 - Instale no seu celular.
@@ -16,12 +16,14 @@
 - ![image_1](images/Capture%2B_2019-11-14-20-22-00~3.png)
 
 - No seu pc. Linux baixe o arquivo com comando:
-- git clone https://github.com/Ivan-Carlos/motin-cam/app/motion_cam.tar.gz
-- Descompacte o arquivo com o comando:
+- git clone https://github.com/Ivan-Carlos/Motin-Cam/
+- Descompacte o arquivo, na raiz do systema, com o comando:
+- cd /
+- No lugar a onde estiver arquivo.
 - tar xvf motion_cam.tar.gz
-- Apos descompactar, de o comando, no lugar a onde estiver arquivo descompactado.
-- cd motion_cam, com editor, edite o arquivo install.sh com o comando:
-- nano install.sh
+- Apos descompactar o arquivo, de o comando.
+- cd /usr/src/ com editor, edite o arquivo manual_install.sh com o comando:
+- nano manual_install.sh
 - Procure a linha NETCAM="value http:\/\/http:\/\/192.168.2.52:4747\/videostream.cgi";
 - Ela está no começo do arquivo, edite com numero que apareceu no celular. 
 - Salve o arquivo.
@@ -37,8 +39,9 @@
 - apt install gcc linux-headers-`uname -r` motion make dkms. 
 - Obs: `uname-r`está entre crazes.
 - Copie exatamente como está escrito.
-- Apos seguir o ritual aqui descrito, se tudo correr direito, daremos,no diretório motion_cam o comando:
-- ./install
+- Apos seguir o ritual aqui descrito, se tudo correr direito,no diretório /usr/src/ daremos o comando:
+- ./manual_install.sh
 - Para observar sua "camera" em tempo real digite no navegador de intenet http://127.0.0.1:8080/,
 - Clicke em cima do quadro para ampliar a imagen. ou edite para  http://127.0.0.1:8081/,
 - Para acompanhar o que foi gravado procure no diretório /var/lib/motion/ pelas imagens gravadas.
+- Versao automatizada ./install.sh
